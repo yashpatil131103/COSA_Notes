@@ -1,0 +1,143 @@
+Prerequisite
+    1. server static ip (SERVER) - 4GB 
+    2. select domain name -> iacsd.local
+    3. SERVER (Additional Domain Controller) -> 4GB
+        server name -> MEMBER 
+    4. Client (Win 10) - 2GB
+
+Note:
+Network Adapter -> Internal Adapter 
+Every Machine Should Be in Same Network
+ 
+1. Restore the SERVER machine to -> Ready to use 
+    Give DNS SERVER : OWN IP (10.20) NCPA.CPL 
+2. As well as Member machine -> Make the wallpaper -> static ip - 100.51 -> turn off the Firewall -> Change the Name to (MEMBER)
+3. Restart
+4. Shutdown
+5. snapshot RTU 
+6. Win 10 Before Demain -> username -> ditiss
+    Password
+7. SERVER :
+    Add Roles And Features -> Server Roles (Active Directory Domain Services)  checkbox
+        ADDS Description :
+            active directory domain services AD DS stores information about objects on the network and makes this information available to users and network administrators.
+            AD DS uses domain controllers to give network users access to permitted resources anywhere on the network through a single logon process
+        
+    Pop Up will Appear Click ON add Features
+
+    Next 
+
+    Next 
+
+    AD DS (Next)
+
+    Note : Tick On the Restart Check Box 
+
+    Install
+
+    Click On -> Promote this server to a domain controller 
+
+    Deployement Config -> Add a new forest (radio button)
+                          Root Name : cdac.local 
+    
+    Domain Controller Options :
+        Forest Functional Level -> SERVER 2016 (Lowest )
+        Domain Functional Level -> SERVER 2016
+        Specify domain controller capabilities :
+            -- DNS (Domain Name System) server 
+            -- GC Global Catalog -> All Info About users and network access 
+
+            Type the Directory Services Restore Mide (DSRM) Password
+            Password : Admin@123 anyone you want
+            Confirm Password : Admin@123 anyone you want
+    
+    Next
+
+    DNS Options :
+        Create DNS Delegation (UnTick) -> NEXT 
+
+    Additional Options
+        NetBIOS Domain Name -> Next
+
+    Paths :
+        Database Folder : 
+        Log Files
+        SYSVOL Folder
+
+        Next 
+        
+    Review Options :
+        Next 
+
+    Prerequisite Check :
+        Install
+
+    Installing
+
+    Results :
+        Restart
+
+    Login in
+
+    go to cmd -> ping cdac.local
+                 ping server.cdac.local
+                 reply should Appear
+                 nslookup
+
+    DO NOT CLOSE THE SERVER
+
+8. Member Server :
+    DNS Should be of Main SERVER : 192.168.10.50
+
+    CMD -> ping 192.168.10.50
+           ping cdac.local
+    
+    SAME INSTALL AD DS JUST Change
+
+    Additional Options:  
+        --Add a Domain controller to an existing domain 
+        Domain : cdac.local
+        select 
+        Username : CDAC\Administator or Administator@cdac.local (use second username)
+        Password : Admin@123
+        Next
+
+    All Other Configuration is same  
+    Next Next Next Install
+
+    Restart 
+
+9. Client :
+
+    CMD - ping cdac.local
+          ping 192.168.10.50
+
+    Do Configuration of DHCP From the SERVER (MEMBER)
+
+10. Main server AD DS -> Right Click On Server -> Users And Clients
+
+    Install Role And Configure it (DHCP)
+
+11. Client
+
+    CHECK IF DHCP GIVeS AUTOMATICALLY IP AND DNS TO THE Client
+
+    cmd -> ping cdac.local
+
+    THIS PC -> PROPERTIES -> CHANGE SETTINGS  -> DOMAIN (cdac.local) -> Give Password
+    Restart
+
+12. SERVER - ADDS  - users and computers -> left Panel (Users) -> Right click -> user -> first name give details 
+        1. tinku sharma 
+        2. pinky tiwari
+        
+
+13. go to client -> go to this pc -> right click -> properties -> rightside change settings -> pop up (system properties)  
+    -> in computer name -> click on change (change its domain or rename ) -> and rename the computer and add the domain (cdac.local) -> ok 
+    -> restart the computer client win 10.
+
+14. go inside server or member -> go into server manager -> into adds -> go to cdac.local users -> users (create a group ) -> add users in that 
+
+15. test cases (to check practical is properly working or not)
+i) pause the member and domain controller (server) and try to login in client using the users added 
+ii) create a folder -> in server create a file -> in that and share it with the group -> try to access the file by users added 

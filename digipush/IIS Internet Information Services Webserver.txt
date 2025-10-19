@@ -1,0 +1,14 @@
+1. Power on the machine 
+2. Open Server Managar
+3. Go to Dashboard
+4. Add roles and Features -> Before you begin (Next) -> Installation Type (Role Based) (Next) -> Server selection (Next) 
+5. Select server roles - Web Server IIS (Tick) -> Pop up will Appear -> Add Features -> Next -> 
+    IIS (Next) -> Role Services (Next) -> Restart Checkbox must be ticked -> Install 
+6. In the Server Manager (Left Panel) -> Select IIS 
+7. Right Click On Server -> Internet Information Service (IIS) Manager
+8. In the Right Panel -> select server -> Default Document (Right Click -> Visit Sites)
+9. On Inside Sites -> Default Website -> Right Panel (Explore) -> iisstart.htm (Edit Using Notepad)
+    Note : Path to remember : C:\inetpub\wwwroot
+10. go to microsoft edge -> enter the ip address of the windows server 
+11.go to client machine (linux /windows server) -> check adapter it must be internal and the ip must be in same network 
+12. for linux you can access the web page by using CURL / LINKS 

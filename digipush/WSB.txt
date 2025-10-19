@@ -1,0 +1,26 @@
+WSB windows server backup :
+	IMP service
+	helps to backup the server appropriately
+	req -> ideally we took the backup on extra disk 
+		for that purpose we should have extra harddisk attached to our server 
+		the purpose of harddisk is backup
+
+setting storage -> actual size ??
+		additional harddisk -> 	take a backup in network device (NAS)
+		it is connected with the network 
+		write permission required 
+		if the backup is taken on the same disk then there might be issue if the disk gets corrupted !!!!!!!
+		
+
+1. To create new hard disk :
+	add hard disk -> create -> size -> 100GB or more than that -> change the name ends with backup.vdi -> do not select pre allocate -> Finish	
+	choose -> ok
+
+2. Start the Machine -> Goto disk management -> Allocate the space 
+
+3. Add roles and features -> Roles (next) -> Features (Windows Server Backup) select -> Next -> Restart Check -> Install 
+
+Wait for installation 
+
+4. Tools -> WSB -> MMC (Mirosoft Management Console) -> Local Backup -> Wait -> Right window -> backup Schedule -> Next -> Full server -> Next -> More than once a Day 3.30 -> Back up to a harddisk -> Destination Disk ()Show all available. -> next -> OK -> YES -> FINISH -> CLOSE 
+

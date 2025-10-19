@@ -1,0 +1,100 @@
+FTP - file transfer protocol 
+      port number 20 (Data Transfer) and 21 (Command control)
+      If we want to setup secure ftp that time we use FTP Over SSH this is Known as SFTP - secure file transfer protocol Port NO (22)
+
+      
+
+      Deamon -> It is a program that runs as a background process, rather than being under the direct control of an interactive user   
+
+      command - #sleep (Delay for specified ammount of time)
+                syntax -> sleep 20 (sec)
+
+                #top -> task manager which processes are running in the background  (Onliner - Givers linux processes)
+
+                #htop 
+
+                #atop -> advanced system and process monitor
+
+                #ps -> report a snapshot of current processes
+                       -a -> 
+                       -axjf ->
+
+                #kill -9 -> signal kill (sleep kill)
+                  syntax -> kill -9 pid (process id) (PPID -> Parent Process ID)
+            
+                # sleep 100 & -> Deamon process
+
+                # ss -> another utility to investigate sockets 
+                        Windows - netstat
+                        used to see the open ports 
+                        -atp -> all tcp processes
+                        -antp -> all port numbers of tcp processes
+
+                        when the local address is 0.0.0.0 -> it signifies that it is listening on all the interfaces
+
+
+
+
+      whenever the linux start first the init process starts 
+
+
+
+task -> (1. read zombie process )
+2. explore top commands
+
+
+
+
+package -> VSFTPD (Very Secure FTP Daemon) 
+
+      install it 
+      status 
+      
+      remotely connect -> ssh USERNAME@IP
+                          ftp USERNAME@IP
+
+                          ssh IP -> put it on the windows (IP -> Debian)
+                                    if you do not provide the username then it will use the system username as the username on remote machine 
+                          ftp IP -> username after the IP
+                                    dir -> to list the files or you can use ls 
+                                    to copy that file from linux to windows -> get command (e.g get attendance.sh) 
+                                    c:/users/ditiss (here you will find the files by default)
+
+                                    to cpy from windows to linux -> put command (e.g put win10.iso) 
+
+                                    here write is disabled -> to change the config 
+                                          /etc/vdftpd.conf
+
+                                          here line no 31 write_enable=YES //uncomment this line 
+
+                                          restart the vdftpd 
+
+                                    to delete the files -> delete command is used 
+
+                                    -- ls -lh (human readable file size )
+
+
+            ## FIleZilla (FTP Client) just like putty
+            optional offer (decline) baki next
+            host -> where do you want to connect 
+
+
+            now for SFTP -> 
+             
+how should i use the sftp in the linux as it is using only the 21 , and 22 port as you have only shown using filezilla 
+
+
+secure copy 
+
+      to run the (scp) command prereq is that it is required that that machine should have ssh service running on it 
+
+      syntax : scp (relative path source - here in our case windows is source) (USERNAME@IP(: this is mandatory)absolute path of the destination - here in our case star user and its home directory)  
+      make sure user must have write permission there 
+
+
+      finger -> user information lookup program 
+      finger USERNAME -> gives info about user !!
+
+            ~/.nofinger -> read it used for Security
+
+            

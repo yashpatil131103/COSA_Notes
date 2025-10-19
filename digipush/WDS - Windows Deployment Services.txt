@@ -1,0 +1,59 @@
+WDS - Windows Deployment Services
+DHCP is required 
+
+Win installer image (wim) 
+
+anyone who wants to install windows machine then they can install using network only
+only windows os can be deployed 
+
+windows server -> Internal Network (DHCP is prerequisite)
+OS = ISO prerequisite
+
+client should boot from the network 
+
+before starting the windows server : 
+    setting -> storage -> DVD Drive -> Should be Empty if not (remove disk from virtual drive)
+
+1. Open the server 
+2. Configure DHCP (Prerequisite)
+3. Create New Machine 
+    i. (Name - Client) 
+    ii. (Do not select ISO)
+    iii. OS -> Microsoft Windows 
+    iv. OS version -> Windows 10 64 bit 
+    v. RAM : 4096
+    vi. virtual harddisk 50 GB
+    vii. Network Adapter : Internal Network 
+    viii. System - Boot Device order 1st should be network 
+    ix. Start this Client Machine 
+    x. confirm that it is getting proper IP 
+4. Add ROles And Services 
+5. Windows Deployment Services
+6. Deployment Server and Transport Server (TICKED)
+7. Next
+8. Restart if required 
+9. install
+10. Go to WDS Management Console 
+11. Servers -> Server-> configure server
+12. Before you begin -> (Next) (Note : PXE preboot Execution Enviroment )
+13. Disk Parition of 20 GB 20480 (NTFS file system required)
+14. Go again to WDS Management Console
+15. Standalone Server -> (Next) 
+16. Path -> New Drive should be selected E/Remote Shell
+17. Both should be checked because the DHCP is working on the same server (Next)
+18. Respond to all client computers (known unknown) do not check the checkbox
+19. Install Image -> Add Install Image -> Create an IMage Group Named (Win10) -> 
+    File Location (location of install.wim -> windows Image format, Compressed files of the OS) 
+    (Info : boot.wim -> bootloader)  
+20. attach disk from the Virtual Box 
+21. PATH : dvd -> sources -> install.wim
+22. Windows 10 pro -> next 
+23. FINISH 
+
+24. BOOT IMAGE L add Boot IMAGE -> Path CD Drive -> sources -> boot.wim
+25. Image Name - Win10BootImage -> Add 
+26. Activate the server -> all task -> start the server 
+27. Restart the client -> press f12 -> (loading file) 
+Username : SERVER\Administator 
+Password : Admin@123
+install the win10 pro 

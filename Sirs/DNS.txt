@@ -1,0 +1,42 @@
+How to set Server Name?
+How to set static IP on server?
+How to off firewall?
+How to change background of Server?
+How to shutdown Server?
+How to take snapshot of a server?
+
+=======================================
+DHCP
+
+Role -> Add -> DHCP
+Left Panel -> DHCP -> Server -> Right Click -> DHCP Manager
+
+Scope Add
+Range Start -> End
+Exclusion
+Scope?
+DNS -> IP
+
+Activate -??? yes
+=======================================================
+IIS
+Role -> Add -> IIS
+Left Panel -> IIS -> Server -> Right Click -> IIS Manager
+
+Default Website
+	Directory Browsing -> enable/disable
+	Default Document -> Name add
+	Default Path -> Explore
+	c:/inetpub/wwwroot
+	iisstart.htm
+=========================================================
+DNS
+
+Role -> Add -> DNS
+Left Panel -> DNS -> Server -> Right Click -> DNS Manager
+
+Forward Lookup
+	Create Zone
+		Entry -> A Record (create associated PTR record)
+Reverse Lookup
+	Create Zone

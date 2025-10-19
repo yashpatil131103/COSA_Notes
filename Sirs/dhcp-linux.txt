@@ -1,0 +1,51 @@
+Linux Machine - Server -> DHCP
+
+Network Adapters
+1. Host Only -> Putty
+2. NAT -> Internet (Packages Installation)
+3. Internal -> DHCP Server (Service)   --------- enp0s9
+
+
+DHCP (Network Plan)
+Network Plan -> Range -> Server Static IP ....!!
+
+192.168.100.0/24
+192.168.100.10 -> Static IP of Server (DHCP Server)
+
+Range -> 192.168.100.101 to 192.168.100.150
+
+=========================================================================
+DHCP -> Installation -> Configuration -> Service Status -> Client Verify
+=========================================================================
+
+1. Installation
+
+Package Name :- isc-dhcp-server
+sudo apt install isc-dhcp-server
+
+2. Configuration
+	a. 	/etc/default/isc-dhcp-server
+			Mention - Network ADAPTER (Where you want to run the DHCP service?)
+	b. 	/etc/dhcp/dhcpd.conf
+			subnet 192.168.100.0 netmask 255.255.255.0 {
+				range 192.168.100.101 192.168.100.150;
+			}
+
+	Service -> Restart
+	sysetmctl restart isc-dhcp-server
+		
+3. Status
+systemctl status isc-dhcp-server
+
+4. Client
+Verify
+(client - Internal Network -> IP -> DHCP)
+
+
+
+
+
+
+
+On the server
+cat /var/lib/dhcp/dhcpd.leases  [ To view the leased IP details ]

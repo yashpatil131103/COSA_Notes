@@ -1,0 +1,16 @@
+1. Power on the machine 
+2. Open Server Managar
+3. Go to Dashboard
+4. Add roles and Features -> Before you begin (Next) -> Installation Type (Role Based) (Next) -> Server selection (Next) 
+5. Server Roles (DNS Server) -> Pop Up Will Appear (Click On Add Feature) -> Next -> DNS Server (Next) -> Confirmation (Restart Checkbox) -> Install
+6. Go to DNS (Left Panel) -> Right on Server (DNS Manager) -> Click On Server -> Right Click (New Zone) -> Pop Up Will Appear
+7. Click On Next -> Select Primary Zone -> Next -> Forward Lookup Zone (Next) -> 
+    Zone Name (ZONE NAME : It must name.com e.g anna.com) (Next) -> Create a new file (Next) -> Do not allow Dynamic Updates (Next) 
+    -> FINISH
+8. Click On Next -> Select Primary Zone -> Next -> Reverse Lookup Zone (Next) -> Ipv4 Reverse Lookup Zone (Next) ->
+    Network ID : Give Network of Server (e.g. 192.168.100.blocked) (Next) -> arpanet.dns is visible (Next) ->  Do not allow Dynamic Updates (Next) 
+    -> FINISH
+9. Go to server - Forward Lookup Zone - name.com (right click) -> select New Host (A or AAAA) -> enter ip address of SERVER 
+    -> Check the checkbox of PTR record (Add Host) -> Successfully Created (OK) -> DONE 
+10. Go to Reverse Lookup Zone Check if there is Pointer is created or not
+11. 

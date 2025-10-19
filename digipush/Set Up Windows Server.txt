@@ -1,0 +1,26 @@
+1. Virtual Box -> New 
+2. VM Name : Windows Server 
+3. Assign Folder
+3. Select ISO file (Windows Server Data Center)
+4. OS Edition : (Datacenter Evaluation Desktop Experience)
+5. Proceed with unattended Installation (Untick)
+6. OS version : Windows Server 2025 64bit 
+7. Specify Virtual Hardware -> Base memory : 4096, Number of CPU - 4
+8. Specify Virtual Harddisk -> MIN : 50GB MAX : 100 GB
+9. FINISH
+10. Settings : Network -> Internal Adapter
+11. Start The Machine 
+12. While Installing the Windows Server Setup -> in Select Image -> select Windows server 2025 Datacenter Evaluation (Desktop Experience)
+13. Create Partition
+
+Username & Password :
+    username : Administator
+    Password : Admin@123
+
+Setup :
+    1. Static IP : 192.168.x.x (x can be 1 - 254)
+    2. Firewall Off
+    3. Name the server : SERVER
+    4. Set Background and Resolution
+
+Shortcut note (Right Ctrl + Delete)
