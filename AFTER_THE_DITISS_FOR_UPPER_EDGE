@@ -1,0 +1,56 @@
+Nisarg Sir  -> Threat Modeling after Security concepts  -> ask sir for lecture 
+
+Roles 
+1. Linux administrator
+2. Windows Administrator
+3. Tech support -> ticket mangment 
+     -> FSM, ADDS, local group and policies 
+     -> windows log -eventids
+     -> bash scrpting
+
+
+4. Network admin
+5. SOC analyst
+6. Incident responce team -> if anything happen in org this team comes when ever any incident happen for handling the situation 
+
+-----------------------------------------------------------------------------------------------------
+4,5,6 comes under security field 
+
+THE FIELD -> SECURITY
+
+roles under -> security analyst 
+           security solution for 25 case studies of some cyber attack 
+requirment -> Basic Linux ,networking ,NDC ,security concpet
+OWASP TOP 10 
+       WEBAPP MOBILEAPP CLOUDAPP 
+       demanding LLM IOT
+ - Baisc attack must be know of OWASP
+ - Solution for that attack
+ - Where the log can be see and Who done it 
+
+
+--------------------------------------------------------------------------------------------------
+Here attack can happen 
+C Confidentiality
+I Integrity               attack ca happen herer 
+A Availablity 
+
+people are most vulnarable 
+N       H    A 
+network Host Application
+
+people process Technology 
+             ISMS crtification
+
+------------------------------------------------------------------------------------------------
+Threat Intelligenec 
+Threat Modelling
+1. attack surface magment (ASM)
+2. Open souurce 
+3. AI
+
+
+-----------------------------------------------------------------------------------------------
+IN project u must apply 
+CIS bench mark knowledge    <---------For compilance 
+   mobile ,linux ,window etc apache2 
