@@ -1,0 +1,91 @@
+day1 
+- compuetr format steps 
+-process state step  and diagram 
+-File system
+- workgroup domain
+-NTLDS error 
+-floppy A,B,C prtion 
+
+day 2
+NAT
+A B C classes 
+public to private class
+private to public 
+telnet vs ssh 
+ip address private 
+
+day 3
+PAT(port address translation) or port forwarding
+
+day 4
+Internt intranet 
+extranet
+IIS
+
+day5
+try to reset password using grub ,simlar also for winodws 
+
+day 6
+ussermod man chown man 
+-sticky bit
+
+day 7
+dhcp dns theory
+default path apache2
+IIS
+ day 8 
+ADDS
+day 9
+PXE
+MMC
+
+day 10
+Install upgrade update and migrate server and workload s
+
+day 11
+ADDS
+creat magment and mantain image for deployment 
++++++DHCP failover
+DHCP mac binnding in linux 
+ADDS trusts 
+   -filesscreens -1.active and pasive
+  - quota appply -1. hard and soft
+domain and trust
+IPv6
+SMB server 
+hyper v
+
+Day 12
+TCP/IP
+OSI
+form 2 books 
+ss command 
+finger man 
+~/.finger
+
+day 13
+FTP NFS
+using in windows server 
+AWS ELB 
+HA proxy
+diff between NFS SMB FTP
+how to mount permant NFS 
+SMB server 
+
+day 14 
+bash apache2 smb sed command and awk command 
+
+day 15
+take squid proxy find accss denied problem 
+ssh isgin no passsword login 
+kikstart conf
+
+
+
+try redhat os 
+start usign and appling and use httpd
+
+LVM
+winodws virtua hosts 
+
+no password ssh  i.e using ssh-keygen just like git and github ssh login 
