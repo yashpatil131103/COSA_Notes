@@ -1,0 +1,12 @@
+WE can Create multiple network inside same setup of connection i.e network 
+just add one or more IP to adapter i.e 2 or more ip to 1 adapter 
+in Win-> Ethernet setting (i.e ncpa.cpl) -> tcpIP iv4 -> Advnace -> add IP i.e second ip 
+
+
+if computer is in network and if want to create a network of 13.0.0.0 the we can create eve if we are in network of 192.168.0.0
+means 
+5 computer under one router of netwokr 192.168.0.0/24
+and now i want to create a one more network in this 
+so 5 computers out o 3 computer we must assign 13.0.0.0/8 ip form this range 
+and now this 3 computer can compuicate throu 13.0.0.0 network and share files through it 
+and other 2 cant even git it .
