@@ -1,0 +1,79 @@
+What is PowerShell?
+
+- PowerShell is Microsoft's command-line shell and scripting language.
+- we can use powershell for automation, system administration and configuration management.
+
+- it is based on .NET -> works with objects, not just text
+- Provides cmdlet (command-lets) -> small, built-in commands with a standard format
+	verb-noun (ex. Get-Process, Get-Help, Get-Process)
+- It supports scripting with loops, functions and error handling
+
+- works with windows and other OS where PowerShell core is available.
+- You can manage local and remote systems using PowerShell
+
+Get-Help	Shows Help for cmdlets
+Get-Command	Lists all available cmdlets/functions.
+Get-Member	Shows properties & methods of objects.
+
+SYSTEM/PROCESS MANAGEMENT
+-------------
+Get-Process	List running processes
+Stop-Process -Id <PID>		Kills a process
+Start-Process notepad.exe	Starts a program (ex. here it will start notepad)
+
+SERVICE MANAGEMENT
+------------
+Get-Service			View System Services
+Start-Service SERVICE_NAME	To start service
+Stop-Service SERVICE_NAME	To stop service
+Restart-Service Service_name	To restart service
+
+FILE & FOLDER MANAGEMENT
+-------------
+Get-ChildItem	(alias:ls,dir)	List files/folders
+Set-Location	(alias:cd)	Change Directory
+Copy-Item			Copy file/folder
+Move-Item			Move file/folder
+Remove-Item			Remove File/folder
+New-Item -ItemType File -Name "Tinku.txt"	To create new tinku.txt
+Get-Content tinku.txt		View file content
+Set-Content tinku.txt "Tinku"	Write to file
+Add-Content tinku.txt "Pinky"	Append to file.
+
+USER & GROUP MANAGEMENT
+-----------
+Get-LocalUser 			List local users
+New-LocalUser -Name "gabbar" -Password (ConvertTo-SecureString 'Admin@123')	To create a user
+Get-LocalGroup			List local Groups
+Add-LocalGroupMember -Group "Administrators" -Member "gabbar"	-> Add gabbar to Administrator Group
+
+EVENT LOGS & SYSTEM INFO
+-------------
+Get-EventLog -LogName System -Newest 10 	Show last 10 system logs
+Get-EventLog -LogName Security -Newest 50	Show last 50 Security Logs
+Get-ComputerInfo				Get Full system Info
+
+NETWORKING
+---------------
+Test-Connection google.com	(alias: ping)
+Get-NetIPAddress		Shows IP details
+Get-NetAdapter			Show Network Adapters
+
+
+PACKAGE MANAGEMENT
+---------------
+Find-Module			Search for Modules (like apt search)
+Install-Module -Name NAME	Install particular module on Windows Server
+Get-WindowsFeature		Check the status
+Install-WindowsFeature	-Name 'DHCP'	To install feature on Windows Server
+IncludeManagementTools		Management tools will get installed along with Windows Feature or Roles
+
+
+
+Install with using Configuration Deployment File
+
+Install-WindowsFeature -ConfigurationFilePath PATH
+
+
+
+

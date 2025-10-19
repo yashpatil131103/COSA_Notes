@@ -1,0 +1,21 @@
+03/09/2025
+
+1. What is server ?
+   - 5 terminals of communication
+2. Pre- requisites
+   - IPV4 Addressing 
+     - Class A,B,C,D,E - RANGE
+   - Private IP Range 
+3. Loopback , range
+4. Apipa , range
+5. Static Ip / Dynamic ip
+6. Private Ip & public ip
+7. Ip address
+8. Port Number
+9. Mac Address
+10. What is ping command
+11. Subnetmask/ netmask
+12. Gateway
+13.Bios
+14.DNS 
+15.Internal DNS SERVER

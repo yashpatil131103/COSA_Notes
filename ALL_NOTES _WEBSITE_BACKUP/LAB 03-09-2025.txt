@@ -1,0 +1,43 @@
+chapter 1 : what is Linux
+understanding tcp/ip
+managing the network imp 
+introducing the basic system administration up to 302 page no
+managing users and groups
+
+03/09/2025
+
+- Windows server installation
+- Linux Debian installation, commands
+- add 3 adapter in both debain , check ping, host only
+
+
+
+
+
+Day 1.Basic virtualization, server os, networking
+Day 2.Linux Debian Installation, basic command
+Day 3.Adapter configuration, FHS
+Day 4.Windows server ,client configuration 
+Day 5.DHCP Server configuration (using linux) basic command of Linux
+Day 6.Linux file permission (rwx)
+Day 7.Windows server & client configuration
+Day 8.Linux command alias,touch,grep,sort,more,less,softlink,hardlink, WSB
+Day 9.WDS (Windows Deployment services)
+Day 10.ADDS in windows
+Day 11.FSRM in windows
+Day 12.FTP,SFTP,NFS Linux
+	- FTP - get , put
+	- FTP - with FileZilla
+	- NFS - in Linux
+Day 13.Proxy - Forward proxy
+	       Reverse Proxy
+	       cache
+	       SMB(SAMBA)
+	       Passwordless SSH
+Day 14.BASH Scripting (Basic) 
+	DFS (Distributed file system)
+Day 15.BASH (Datatypes,loops)
+	Windows Exchange server - Mail server
+
+
+

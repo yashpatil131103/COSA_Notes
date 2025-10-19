@@ -1,0 +1,117 @@
+FTP Linux - Linux (internal adapter)
+- server - Install vsftpd - edit in configuration file uncomment line no 31
+- client - install ftp - write ftp server ip - give username or pass word of server
+- ftp get file name 
+- you will access a file from server in client
+- if you send a file we can put command with using sftp 
+- on client sftp server ip -> enter
+- put filename
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* SAMBA Server (server message block) 445 port no
+
+Linux to windows (internal adapater)
+
+- Install samba sudo apt install samba
+- Check status sudo apt status samba
+- create a directory under media file /media/  & give permission 777
+- edit in configuration file sudo nano /etc/samba/smb.conf
+	edit at netlogn [star-share] add below commands in conf file
+			comment=optional
+			path=/media/star
+			guest ok= no
+			read only=no
+			valid users=star
+- restart & check status of samba
+- sudo smbpasswd -a star
+	new pass - password to provide
+- restart smb
+- open client win machine -> win+R -> SERVER_IP -> ID & PASS ->
+- File access
+
+
+forward proxy
+-  static ip to 3 machines 2 servers 1 proxy server
+-  ws1- ws2 - install apache2
+-  proxy server- install haproxy
+-  open configuration file in /etc/haproxy/haproxy.cfg 
+				frontend http_front
+       					 bind *:80
+        				 default_backend http_back
+
+				backend http_back
+        				balance roundrobin
+       					server s1 192.168.56.122:80 check
+        				server s2 192.168.56.126:80 check
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+	
+
